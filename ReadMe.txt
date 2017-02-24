@@ -19,3 +19,6 @@ Generating a range test cases:
 
 Checking to see if prime test cases:
 \PrimeNumberGeneratorEclipseProject\src\TestCases\IsPrimeTestCase.java
+
+Console Application test case
+\PrimeNumberGeneratorEclipseProject\src\TestCases\PrimeFactorConsoleApplicationTestCase.java
