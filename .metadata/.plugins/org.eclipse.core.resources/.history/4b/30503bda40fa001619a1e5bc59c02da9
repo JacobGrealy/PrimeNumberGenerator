@@ -1,0 +1,30 @@
+package TestCases;
+
+import static org.junit.Assert.*;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import org.junit.*;
+import Implementation.*;
+
+public class PrimeFactorConsoleApplicationTestCase {
+
+	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();	
+
+	@Before
+	public void setUp() {
+		//Set up new streams
+	    System.setOut(new PrintStream(outContent));
+	    System.setErr(new PrintStream(errContent));
+	}
+	
+	//Test 0 parameters passed
+	@Test
+	public void zeroParametersPassedTest() {
+		String[] args = new String[0];
+		PrimeFactorConsoleApplication.main(args);
+		String expectedOut = "Error, expecting 2 arguments: int startingValue, int endingValue";
+		assertEquals(expectedOut, outContent.toString());
+	}
+
+}

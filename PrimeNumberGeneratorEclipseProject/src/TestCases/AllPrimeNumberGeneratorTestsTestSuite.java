@@ -7,6 +7,7 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
   GenerateTestCase.class,
   IsPrimeTestCase.class,
+  PrimeFactorConsoleApplicationTestCase.class
 })
 //This class is used for running all of the tests cases for PrimeNumberGenerator
 public class AllPrimeNumberGeneratorTestsTestSuite {

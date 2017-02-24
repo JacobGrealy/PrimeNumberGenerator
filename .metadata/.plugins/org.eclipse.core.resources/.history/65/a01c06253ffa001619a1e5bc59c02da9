@@ -1,0 +1,28 @@
+package TestCases;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import org.junit.*;
+
+import Implementation.PrimeFactorConsoleApplication;
+
+public class PrimeFactorConsoleApplicationTestCase {
+
+	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();	
+
+	@Before
+	public void setUp() {
+		//Set up new streams
+	    System.setOut(new PrintStream(outContent));
+	    System.setErr(new PrintStream(errContent));
+	}
+	
+	//Test 0 parameters passed
+	@Test
+	public void test() {
+		String[] args = new String[0];
+		PrimeFactorConsoleApplication.main(args);
+	}
+
+}
